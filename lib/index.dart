@@ -21,4 +21,4 @@ export '/pages/error_msg/error_msg_widget.dart' show ErrorMsgWidget;
 export '/pages/chat_ai_screen/chat_ai_screen_widget.dart'
     show ChatAiScreenWidget;
 export '/pages/booklist/booklist_widget.dart' show BooklistWidget;
-export '/googlemap/googlemap_widget.dart' show GooglemapWidget;
+export '/pages/googlemap/googlemap_widget.dart' show GooglemapWidget;
