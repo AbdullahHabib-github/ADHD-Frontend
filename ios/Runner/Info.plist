@@ -54,7 +54,14 @@
 	<true/>
 
 
-
+	<key>NSCalendarsUsageDescription</key>
+    <string>Enable Calander to create a remote directory of all your tasks</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+    <string>Allow location access to use the "Study Buddy" feature</string>
+	<key>PermissionGroupNotification</key>
+    <string>Enable notification to get updates about your upcoming tasks</string>
+	<key>NSMicrophoneUsageDescription</key>
+    <string>Allow this permission to use the  "Read to me" feature</string>
 
 
 	<key>UILaunchStoryboardName</key>

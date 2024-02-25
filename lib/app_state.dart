@@ -1,9 +1,4 @@
 import 'package:flutter/material.dart';
-import '/backend/backend.dart';
-import 'backend/api_requests/api_manager.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import 'flutter_flow/flutter_flow_util.dart';
-import 'dart:convert';
 
 class FFAppState extends ChangeNotifier {
   static FFAppState _instance = FFAppState._internal();
@@ -27,13 +22,13 @@ class FFAppState extends ChangeNotifier {
 
   String _threadId = '';
   String get threadId => _threadId;
-  set threadId(String _value) {
-    _threadId = _value;
+  set threadId(String value) {
+    _threadId = value;
   }
 
   dynamic _FirstResponse;
   dynamic get FirstResponse => _FirstResponse;
-  set FirstResponse(dynamic _value) {
-    _FirstResponse = _value;
+  set FirstResponse(dynamic value) {
+    _FirstResponse = value;
   }
 }

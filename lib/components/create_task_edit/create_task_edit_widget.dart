@@ -1,14 +1,9 @@
-import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_datetime_picker_plus/flutter_datetime_picker_plus.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'create_task_edit_model.dart';
 export 'create_task_edit_model.dart';
@@ -70,7 +65,7 @@ class _CreateTaskEditWidgetState extends State<CreateTaskEditWidget> {
         child: Container(
           width: double.infinity,
           height: double.infinity,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             color: Color(0xD60E151B),
           ),
           child: Column(
@@ -78,7 +73,7 @@ class _CreateTaskEditWidgetState extends State<CreateTaskEditWidget> {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
                 child: Container(
                   width: 60.0,
                   height: 4.0,
@@ -91,7 +86,7 @@ class _CreateTaskEditWidgetState extends State<CreateTaskEditWidget> {
               Material(
                 color: Colors.transparent,
                 elevation: 0.0,
-                shape: RoundedRectangleBorder(
+                shape: const RoundedRectangleBorder(
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(0.0),
                     bottomRight: Radius.circular(0.0),
@@ -104,14 +99,14 @@ class _CreateTaskEditWidgetState extends State<CreateTaskEditWidget> {
                   height: 490.0,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).secondaryBackground,
-                    boxShadow: [
+                    boxShadow: const [
                       BoxShadow(
                         blurRadius: 7.0,
                         color: Color(0x5D000000),
                         offset: Offset(0.0, -2.0),
                       )
                     ],
-                    borderRadius: BorderRadius.only(
+                    borderRadius: const BorderRadius.only(
                       bottomLeft: Radius.circular(0.0),
                       bottomRight: Radius.circular(0.0),
                       topLeft: Radius.circular(16.0),
@@ -123,7 +118,7 @@ class _CreateTaskEditWidgetState extends State<CreateTaskEditWidget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               16.0, 20.0, 16.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -137,7 +132,7 @@ class _CreateTaskEditWidgetState extends State<CreateTaskEditWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               16.0, 4.0, 16.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -150,7 +145,7 @@ class _CreateTaskEditWidgetState extends State<CreateTaskEditWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               16.0, 16.0, 16.0, 0.0),
                           child: TextFormField(
                             controller: _model.textController1,
@@ -173,21 +168,21 @@ class _CreateTaskEditWidgetState extends State<CreateTaskEditWidget> {
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
                               focusedBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
                               errorBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
                               focusedErrorBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
@@ -203,7 +198,7 @@ class _CreateTaskEditWidgetState extends State<CreateTaskEditWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               16.0, 16.0, 16.0, 0.0),
                           child: TextFormField(
                             controller: _model.textController2,
@@ -225,21 +220,21 @@ class _CreateTaskEditWidgetState extends State<CreateTaskEditWidget> {
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
                               focusedBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
                               errorBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
                               focusedErrorBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
@@ -257,7 +252,7 @@ class _CreateTaskEditWidgetState extends State<CreateTaskEditWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               16.0, 16.0, 16.0, 0.0),
                           child: Container(
                             width: MediaQuery.sizeOf(context).width * 0.92,
@@ -278,7 +273,7 @@ class _CreateTaskEditWidgetState extends State<CreateTaskEditWidget> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       16.0, 0.0, 0.0, 0.0),
                                   child: Text(
                                     'Current Due Date',
@@ -287,26 +282,34 @@ class _CreateTaskEditWidgetState extends State<CreateTaskEditWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       16.0, 4.0, 0.0, 0.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Text(
                                         valueOrDefault<String>(
-                                          dateTimeFormat('MMMEd',
-                                              widget.todoRef?.toDoDate),
+                                          dateTimeFormat(
+                                            'MMMEd',
+                                            widget.todoRef?.toDoDate,
+                                            locale: FFLocalizations.of(context)
+                                                .languageCode,
+                                          ),
                                           'Change Date',
                                         ),
                                         style: FlutterFlowTheme.of(context)
                                             .titleSmall,
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             4.0, 0.0, 0.0, 0.0),
                                         child: Text(
                                           dateTimeFormat(
-                                              'jm', widget.todoRef!.toDoDate!),
+                                            'jm',
+                                            widget.todoRef!.toDoDate!,
+                                            locale: FFLocalizations.of(context)
+                                                .languageCode,
+                                          ),
                                           style: FlutterFlowTheme.of(context)
                                               .titleSmall,
                                         ),
@@ -319,7 +322,7 @@ class _CreateTaskEditWidgetState extends State<CreateTaskEditWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               16.0, 8.0, 16.0, 0.0),
                           child: InkWell(
                             splashColor: Colors.transparent,
@@ -327,47 +330,33 @@ class _CreateTaskEditWidgetState extends State<CreateTaskEditWidget> {
                             hoverColor: Colors.transparent,
                             highlightColor: Colors.transparent,
                             onTap: () async {
-                              if (kIsWeb) {
-                                final _datePickedDate = await showDatePicker(
+                              final datePickedDate = await showDatePicker(
+                                context: context,
+                                initialDate: getCurrentTimestamp,
+                                firstDate: DateTime(1900),
+                                lastDate: DateTime(2050),
+                              );
+
+                              TimeOfDay? datePickedTime;
+                              if (datePickedDate != null) {
+                                datePickedTime = await showTimePicker(
                                   context: context,
-                                  initialDate: getCurrentTimestamp,
-                                  firstDate: DateTime(1900),
-                                  lastDate: DateTime(2050),
+                                  initialTime: TimeOfDay.fromDateTime(
+                                      getCurrentTimestamp),
                                 );
+                              }
 
-                                TimeOfDay? _datePickedTime;
-                                if (_datePickedDate != null) {
-                                  _datePickedTime = await showTimePicker(
-                                    context: context,
-                                    initialTime: TimeOfDay.fromDateTime(
-                                        getCurrentTimestamp),
+                              if (datePickedDate != null &&
+                                  datePickedTime != null) {
+                                safeSetState(() {
+                                  _model.datePicked = DateTime(
+                                    datePickedDate.year,
+                                    datePickedDate.month,
+                                    datePickedDate.day,
+                                    datePickedTime!.hour,
+                                    datePickedTime.minute,
                                   );
-                                }
-
-                                if (_datePickedDate != null &&
-                                    _datePickedTime != null) {
-                                  safeSetState(() {
-                                    _model.datePicked = DateTime(
-                                      _datePickedDate.year,
-                                      _datePickedDate.month,
-                                      _datePickedDate.day,
-                                      _datePickedTime!.hour,
-                                      _datePickedTime.minute,
-                                    );
-                                  });
-                                }
-                              } else {
-                                await DatePicker.showDateTimePicker(
-                                  context,
-                                  showTitleActions: true,
-                                  onConfirm: (date) {
-                                    safeSetState(() {
-                                      _model.datePicked = date;
-                                    });
-                                  },
-                                  currentTime: getCurrentTimestamp,
-                                  minTime: DateTime(0, 0, 0),
-                                );
+                                });
                               }
                             },
                             child: Container(
@@ -384,7 +373,7 @@ class _CreateTaskEditWidgetState extends State<CreateTaskEditWidget> {
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     16.0, 0.0, 0.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -392,17 +381,26 @@ class _CreateTaskEditWidgetState extends State<CreateTaskEditWidget> {
                                     Text(
                                       valueOrDefault<String>(
                                         dateTimeFormat(
-                                            'MMMEd', _model.datePicked),
+                                          'MMMEd',
+                                          _model.datePicked,
+                                          locale: FFLocalizations.of(context)
+                                              .languageCode,
+                                        ),
                                         'Change Date',
                                       ),
                                       style: FlutterFlowTheme.of(context)
                                           .titleSmall,
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           4.0, 0.0, 0.0, 0.0),
                                       child: Text(
-                                        dateTimeFormat('jm', _model.datePicked),
+                                        dateTimeFormat(
+                                          'jm',
+                                          _model.datePicked,
+                                          locale: FFLocalizations.of(context)
+                                              .languageCode,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .titleSmall,
                                       ),
@@ -414,7 +412,7 @@ class _CreateTaskEditWidgetState extends State<CreateTaskEditWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               16.0, 16.0, 16.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -428,9 +426,9 @@ class _CreateTaskEditWidgetState extends State<CreateTaskEditWidget> {
                                 options: FFButtonOptions(
                                   width: 110.0,
                                   height: 50.0,
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
-                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
                                   color: FlutterFlowTheme.of(context)
                                       .primaryBackground,
@@ -442,7 +440,7 @@ class _CreateTaskEditWidgetState extends State<CreateTaskEditWidget> {
                                             .primaryText,
                                       ),
                                   elevation: 2.0,
-                                  borderSide: BorderSide(
+                                  borderSide: const BorderSide(
                                     color: Colors.transparent,
                                     width: 1.0,
                                   ),
@@ -464,9 +462,9 @@ class _CreateTaskEditWidgetState extends State<CreateTaskEditWidget> {
                                 options: FFButtonOptions(
                                   width: 170.0,
                                   height: 50.0,
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
-                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
                                   color: FlutterFlowTheme.of(context).primary,
                                   textStyle: FlutterFlowTheme.of(context)
@@ -477,7 +475,7 @@ class _CreateTaskEditWidgetState extends State<CreateTaskEditWidget> {
                                             FlutterFlowTheme.of(context).white,
                                       ),
                                   elevation: 3.0,
-                                  borderSide: BorderSide(
+                                  borderSide: const BorderSide(
                                     color: Colors.transparent,
                                     width: 1.0,
                                   ),

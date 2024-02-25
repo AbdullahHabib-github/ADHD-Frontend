@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:typed_data';
 
 import '/flutter_flow/flutter_flow_util.dart';
 import 'api_manager.dart';
@@ -37,8 +36,8 @@ class ChatbotCall {
   }) async {
     final ffApiRequestBody = '''
 {
-  "thread_id": "${threadId}",
-  "prompt": "${prompt}"
+  "thread_id": "$threadId",
+  "prompt": "$prompt"
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'Chatbot',

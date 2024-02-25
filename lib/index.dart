@@ -17,9 +17,8 @@ export '/pages/chatbotgemini/chatbotgemini_widget.dart'
     show ChatbotgeminiWidget;
 export '/pages/chatbotgemini_copy/chatbotgemini_copy_widget.dart'
     show ChatbotgeminiCopyWidget;
-export '/pages/chatbot/chatbot_widget.dart' show ChatbotWidget;
-export '/pages/chatbottest/chatbottest_widget.dart' show ChatbottestWidget;
 export '/pages/error_msg/error_msg_widget.dart' show ErrorMsgWidget;
 export '/pages/chat_ai_screen/chat_ai_screen_widget.dart'
     show ChatAiScreenWidget;
 export '/pages/booklist/booklist_widget.dart' show BooklistWidget;
+export '/googlemap/googlemap_widget.dart' show GooglemapWidget;

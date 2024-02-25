@@ -1,13 +1,10 @@
-import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/components/create_task_edit/create_task_edit_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'task_details_model.dart';
 export 'task_details_model.dart';
@@ -104,7 +101,7 @@ class _TaskDetailsWidgetState extends State<TaskDetailsWidget> {
                   await showModalBottomSheet(
                     isScrollControlled: true,
                     backgroundColor: Colors.transparent,
-                    barrierColor: Color(0x230E151B),
+                    barrierColor: const Color(0x230E151B),
                     context: context,
                     builder: (context) {
                       return Padding(
@@ -133,14 +130,14 @@ class _TaskDetailsWidgetState extends State<TaskDetailsWidget> {
                       width: MediaQuery.sizeOf(context).width * 1.0,
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).secondaryBackground,
-                        boxShadow: [
+                        boxShadow: const [
                           BoxShadow(
                             blurRadius: 5.0,
                             color: Color(0x230E151B),
                             offset: Offset(0.0, 2.0),
                           )
                         ],
-                        borderRadius: BorderRadius.only(
+                        borderRadius: const BorderRadius.only(
                           bottomLeft: Radius.circular(16.0),
                           bottomRight: Radius.circular(16.0),
                           topLeft: Radius.circular(0.0),
@@ -151,7 +148,7 @@ class _TaskDetailsWidgetState extends State<TaskDetailsWidget> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 16.0, 8.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -167,7 +164,7 @@ class _TaskDetailsWidgetState extends State<TaskDetailsWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 16.0, 8.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -213,7 +210,7 @@ class _TaskDetailsWidgetState extends State<TaskDetailsWidget> {
                             color: FlutterFlowTheme.of(context).lineColor,
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 8.0, 16.0, 8.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -229,23 +226,31 @@ class _TaskDetailsWidgetState extends State<TaskDetailsWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 16.0, 24.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Text(
-                                  dateTimeFormat('MMMEd',
-                                      taskDetailsToDoListRecord.toDoDate!),
+                                  dateTimeFormat(
+                                    'MMMEd',
+                                    taskDetailsToDoListRecord.toDoDate!,
+                                    locale: FFLocalizations.of(context)
+                                        .languageCode,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .headlineMedium,
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       4.0, 0.0, 0.0, 0.0),
                                   child: Text(
-                                    dateTimeFormat('jm',
-                                        taskDetailsToDoListRecord.toDoDate!),
+                                    dateTimeFormat(
+                                      'jm',
+                                      taskDetailsToDoListRecord.toDoDate!,
+                                      locale: FFLocalizations.of(context)
+                                          .languageCode,
+                                    ),
                                     style: FlutterFlowTheme.of(context)
                                         .headlineMedium
                                         .override(
@@ -260,7 +265,7 @@ class _TaskDetailsWidgetState extends State<TaskDetailsWidget> {
                           ),
                           if (!taskDetailsToDoListRecord.toDoState)
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 24.0),
                               child: FFButtonWidget(
                                 onPressed: () async {
@@ -276,7 +281,7 @@ class _TaskDetailsWidgetState extends State<TaskDetailsWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .titleMedium,
                                       ),
-                                      duration: Duration(milliseconds: 4000),
+                                      duration: const Duration(milliseconds: 4000),
                                       backgroundColor:
                                           FlutterFlowTheme.of(context).primary,
                                     ),
@@ -285,7 +290,7 @@ class _TaskDetailsWidgetState extends State<TaskDetailsWidget> {
                                   context.pushNamed(
                                     'CompletedTasks',
                                     extra: <String, dynamic>{
-                                      kTransitionInfoKey: TransitionInfo(
+                                      kTransitionInfoKey: const TransitionInfo(
                                         hasTransition: true,
                                         transitionType:
                                             PageTransitionType.leftToRight,
@@ -298,9 +303,9 @@ class _TaskDetailsWidgetState extends State<TaskDetailsWidget> {
                                 options: FFButtonOptions(
                                   width: 300.0,
                                   height: 56.0,
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
-                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
                                   color: FlutterFlowTheme.of(context).primary,
                                   textStyle: FlutterFlowTheme.of(context)
@@ -311,7 +316,7 @@ class _TaskDetailsWidgetState extends State<TaskDetailsWidget> {
                                             FlutterFlowTheme.of(context).white,
                                       ),
                                   elevation: 3.0,
-                                  borderSide: BorderSide(
+                                  borderSide: const BorderSide(
                                     color: Colors.transparent,
                                     width: 1.0,
                                   ),

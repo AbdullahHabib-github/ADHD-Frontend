@@ -1,9 +1,7 @@
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'learningstyles_model.dart';
@@ -55,13 +53,13 @@ class _LearningstylesWidgetState extends State<LearningstylesWidget> {
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 30.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 30.0),
                   child: GradientText(
                     'What learning style suits you today?',
                     style: FlutterFlowTheme.of(context).headlineMedium.override(
@@ -79,7 +77,7 @@ class _LearningstylesWidgetState extends State<LearningstylesWidget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
@@ -95,7 +93,7 @@ class _LearningstylesWidgetState extends State<LearningstylesWidget> {
                         borderRadius: BorderRadius.circular(12.0),
                       ),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 10.0, 16.0, 16.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -120,7 +118,7 @@ class _LearningstylesWidgetState extends State<LearningstylesWidget> {
                               gradientType: GradientType.linear,
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   10.0, 0.0, 0.0, 0.0),
                               child: Icon(
                                 Icons.headphones_sharp,
@@ -136,7 +134,7 @@ class _LearningstylesWidgetState extends State<LearningstylesWidget> {
                 ),
                 Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(24.0, 100.0, 24.0, 0.0),
+                      const EdgeInsetsDirectional.fromSTEB(24.0, 100.0, 24.0, 0.0),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
@@ -152,7 +150,7 @@ class _LearningstylesWidgetState extends State<LearningstylesWidget> {
                         borderRadius: BorderRadius.circular(12.0),
                       ),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 16.0, 16.0, 16.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -171,7 +169,7 @@ class _LearningstylesWidgetState extends State<LearningstylesWidget> {
                                   ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   10.0, 0.0, 0.0, 0.0),
                               child: Icon(
                                 Icons.menu_book_outlined,
@@ -186,10 +184,10 @@ class _LearningstylesWidgetState extends State<LearningstylesWidget> {
                   ),
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0.0, 1.0),
+                  alignment: const AlignmentDirectional(0.0, 1.0),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(24.0, 100.0, 24.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(24.0, 100.0, 24.0, 0.0),
                     child: InkWell(
                       splashColor: Colors.transparent,
                       focusColor: Colors.transparent,
@@ -200,7 +198,7 @@ class _LearningstylesWidgetState extends State<LearningstylesWidget> {
                       },
                       child: Container(
                         width: double.infinity,
-                        constraints: BoxConstraints(
+                        constraints: const BoxConstraints(
                           minWidth: double.infinity,
                         ),
                         decoration: BoxDecoration(
@@ -208,9 +206,9 @@ class _LearningstylesWidgetState extends State<LearningstylesWidget> {
                               FlutterFlowTheme.of(context).secondaryBackground,
                           borderRadius: BorderRadius.circular(12.0),
                         ),
-                        alignment: AlignmentDirectional(0.0, 1.0),
+                        alignment: const AlignmentDirectional(0.0, 1.0),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               16.0, 16.0, 16.0, 16.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -229,7 +227,7 @@ class _LearningstylesWidgetState extends State<LearningstylesWidget> {
                                     ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     10.0, 0.0, 0.0, 0.0),
                                 child: Icon(
                                   Icons.insert_page_break_rounded,

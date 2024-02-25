@@ -1,9 +1,7 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'booklist_model.dart';
 export 'booklist_model.dart';
@@ -45,7 +43,7 @@ class _BooklistWidgetState extends State<BooklistWidget> {
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: FlutterFlowTheme.of(context).warning,
         appBar: AppBar(
           backgroundColor: FlutterFlowTheme.of(context).secondary,
           automaticallyImplyLeading: false,
@@ -55,7 +53,7 @@ class _BooklistWidgetState extends State<BooklistWidget> {
           ),
           actions: [
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
               child: FlutterFlowIconButton(
                 borderColor: Colors.transparent,
                 borderRadius: 30.0,
@@ -94,7 +92,7 @@ class _BooklistWidgetState extends State<BooklistWidget> {
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).secondaryBackground,
-                    boxShadow: [
+                    boxShadow: const [
                       BoxShadow(
                         blurRadius: 3.0,
                         color: Color(0x33000000),
@@ -102,31 +100,40 @@ class _BooklistWidgetState extends State<BooklistWidget> {
                       )
                     ],
                   ),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
-                            16.0, 0.0, 0.0, 12.0),
-                        child: Text(
-                          'Choose your book.',
-                          style: FlutterFlowTheme.of(context).labelMedium,
+                  child: Padding(
+                    padding:
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              16.0, 0.0, 0.0, 12.0),
+                          child: Text(
+                            'Uploaded books',
+                            style: FlutterFlowTheme.of(context)
+                                .headlineMedium
+                                .override(
+                                  fontFamily: 'Outfit',
+                                  fontSize: 40.0,
+                                ),
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 1.0, 0.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 1.0, 0.0, 0.0),
                   child: ListView(
                     padding: EdgeInsets.zero,
                     shrinkWrap: true,
                     scrollDirection: Axis.vertical,
                     children: [
                       Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 1.0),
+                        padding: const EdgeInsetsDirectional.fromSTEB(
+                            0.0, 100.0, 0.0, 1.0),
                         child: InkWell(
                           splashColor: Colors.transparent,
                           focusColor: Colors.transparent,
@@ -145,12 +152,12 @@ class _BooklistWidgetState extends State<BooklistWidget> {
                                 BoxShadow(
                                   blurRadius: 0.0,
                                   color: FlutterFlowTheme.of(context).alternate,
-                                  offset: Offset(0.0, 1.0),
+                                  offset: const Offset(0.0, 1.0),
                                 )
                               ],
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 0.0, 16.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -158,7 +165,7 @@ class _BooklistWidgetState extends State<BooklistWidget> {
                                 children: [
                                   Expanded(
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           12.0, 0.0, 0.0, 0.0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
@@ -169,13 +176,13 @@ class _BooklistWidgetState extends State<BooklistWidget> {
                                         children: [
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 4.0),
                                             child: Text(
                                               'Physics Book 9',
                                               style:
                                                   FlutterFlowTheme.of(context)
-                                                      .bodyLarge,
+                                                      .titleLarge,
                                             ),
                                           ),
                                         ],
@@ -195,8 +202,8 @@ class _BooklistWidgetState extends State<BooklistWidget> {
                         ),
                       ),
                       Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 1.0),
+                        padding: const EdgeInsetsDirectional.fromSTEB(
+                            0.0, 100.0, 0.0, 1.0),
                         child: InkWell(
                           splashColor: Colors.transparent,
                           focusColor: Colors.transparent,
@@ -215,12 +222,12 @@ class _BooklistWidgetState extends State<BooklistWidget> {
                                 BoxShadow(
                                   blurRadius: 0.0,
                                   color: FlutterFlowTheme.of(context).alternate,
-                                  offset: Offset(0.0, 1.0),
+                                  offset: const Offset(0.0, 1.0),
                                 )
                               ],
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 0.0, 16.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -228,7 +235,7 @@ class _BooklistWidgetState extends State<BooklistWidget> {
                                 children: [
                                   Expanded(
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           12.0, 0.0, 0.0, 0.0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
@@ -239,13 +246,13 @@ class _BooklistWidgetState extends State<BooklistWidget> {
                                         children: [
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 4.0),
                                             child: Text(
                                               'Operating Systems: Three Easy Pieces',
                                               style:
                                                   FlutterFlowTheme.of(context)
-                                                      .bodyLarge,
+                                                      .titleLarge,
                                             ),
                                           ),
                                         ],
@@ -265,8 +272,8 @@ class _BooklistWidgetState extends State<BooklistWidget> {
                         ),
                       ),
                       Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 1.0),
+                        padding: const EdgeInsetsDirectional.fromSTEB(
+                            0.0, 100.0, 0.0, 1.0),
                         child: InkWell(
                           splashColor: Colors.transparent,
                           focusColor: Colors.transparent,
@@ -285,12 +292,12 @@ class _BooklistWidgetState extends State<BooklistWidget> {
                                 BoxShadow(
                                   blurRadius: 0.0,
                                   color: FlutterFlowTheme.of(context).alternate,
-                                  offset: Offset(0.0, 1.0),
+                                  offset: const Offset(0.0, 1.0),
                                 )
                               ],
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 0.0, 16.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -298,7 +305,7 @@ class _BooklistWidgetState extends State<BooklistWidget> {
                                 children: [
                                   Expanded(
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           12.0, 0.0, 0.0, 0.0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
@@ -309,13 +316,13 @@ class _BooklistWidgetState extends State<BooklistWidget> {
                                         children: [
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 4.0),
                                             child: Text(
                                               'Machine Learning for Absolute Beginners',
                                               style:
                                                   FlutterFlowTheme.of(context)
-                                                      .bodyLarge,
+                                                      .titleLarge,
                                             ),
                                           ),
                                         ],

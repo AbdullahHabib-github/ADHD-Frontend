@@ -1,11 +1,9 @@
 import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/upload_data.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'mainpage_model.dart';
 export 'mainpage_model.dart';
@@ -55,7 +53,7 @@ class _MainpageWidgetState extends State<MainpageWidget> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(24.0, 16.0, 24.0, 16.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 16.0, 24.0, 16.0),
                 child: Text(
                   'Conquer Distractions',
                   style: FlutterFlowTheme.of(context).headlineLarge.override(
@@ -65,7 +63,7 @@ class _MainpageWidgetState extends State<MainpageWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(24.0, 16.0, 16.0, 16.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 16.0, 16.0, 16.0),
                 child: InkWell(
                   splashColor: Colors.transparent,
                   focusColor: Colors.transparent,
@@ -122,7 +120,7 @@ class _MainpageWidgetState extends State<MainpageWidget> {
                         borderRadius: BorderRadius.circular(12.0),
                       ),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 16.0, 16.0, 16.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -139,7 +137,7 @@ class _MainpageWidgetState extends State<MainpageWidget> {
                                   ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   10.0, 10.0, 0.0, 12.0),
                               child: Icon(
                                 Icons.cloud_upload,
@@ -155,7 +153,7 @@ class _MainpageWidgetState extends State<MainpageWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 16.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 16.0),
                 child: InkWell(
                   splashColor: Colors.transparent,
                   focusColor: Colors.transparent,
@@ -178,7 +176,7 @@ class _MainpageWidgetState extends State<MainpageWidget> {
                         borderRadius: BorderRadius.circular(12.0),
                       ),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 16.0, 16.0, 16.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -204,7 +202,7 @@ class _MainpageWidgetState extends State<MainpageWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 12.0),
                               child: Icon(
                                 Icons.content_copy,
@@ -220,7 +218,7 @@ class _MainpageWidgetState extends State<MainpageWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 24.0, 16.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 24.0, 16.0),
                 child: Material(
                   color: Colors.transparent,
                   elevation: 2.0,
@@ -235,7 +233,7 @@ class _MainpageWidgetState extends State<MainpageWidget> {
                       borderRadius: BorderRadius.circular(12.0),
                     ),
                     child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(
+                      padding: const EdgeInsetsDirectional.fromSTEB(
                           16.0, 16.0, 16.0, 16.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
@@ -261,7 +259,7 @@ class _MainpageWidgetState extends State<MainpageWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 10.0, 10.0, 0.0, 12.0),
                             child: FaIcon(
                               FontAwesomeIcons.school,

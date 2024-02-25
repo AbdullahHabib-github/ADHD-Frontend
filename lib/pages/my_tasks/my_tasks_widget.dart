@@ -6,11 +6,8 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_toggle_icon.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 import 'package:provider/provider.dart';
 import 'my_tasks_model.dart';
@@ -44,8 +41,8 @@ class _MyTasksWidgetState extends State<MyTasksWidget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: Offset(0.0, 70.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 70.0),
+          end: const Offset(0.0, 0.0),
         ),
       ],
     ),
@@ -85,14 +82,14 @@ class _MyTasksWidgetState extends State<MyTasksWidget>
           await showModalBottomSheet(
             isScrollControlled: true,
             backgroundColor: Colors.transparent,
-            barrierColor: Color(0x230E151B),
+            barrierColor: const Color(0x230E151B),
             context: context,
             builder: (context) {
               return Padding(
                 padding: MediaQuery.viewInsetsOf(context),
-                child: Container(
+                child: SizedBox(
                   height: MediaQuery.sizeOf(context).height * 1.0,
-                  child: CreateTaskNewWidget(),
+                  child: const CreateTaskNewWidget(),
                 ),
               );
             },
@@ -116,7 +113,7 @@ class _MyTasksWidgetState extends State<MyTasksWidget>
                 color: FlutterFlowTheme.of(context).white,
               ),
         ),
-        actions: [],
+        actions: const [],
         centerTitle: false,
         elevation: 0.0,
       ),
@@ -143,7 +140,7 @@ class _MyTasksWidgetState extends State<MyTasksWidget>
               ],
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 0.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
@@ -156,7 +153,7 @@ class _MyTasksWidgetState extends State<MyTasksWidget>
             ),
             Expanded(
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
                 child:
                     PagedListView<DocumentSnapshot<Object?>?, ToDoListRecord>(
                   pagingController: _model.setListViewController(
@@ -164,10 +161,6 @@ class _MyTasksWidgetState extends State<MyTasksWidget>
                         .where(
                           'user',
                           isEqualTo: currentUserReference,
-                        )
-                        .where(
-                          'toDoState',
-                          isEqualTo: false,
                         )
                         .orderBy('toDoDate'),
                   ),
@@ -199,14 +192,14 @@ class _MyTasksWidgetState extends State<MyTasksWidget>
                         ),
                       ),
                     ),
-                    noItemsFoundIndicatorBuilder: (_) => Center(
+                    noItemsFoundIndicatorBuilder: (_) => const Center(
                       child: EmptyListTasksWidget(),
                     ),
                     itemBuilder: (context, _, listViewIndex) {
                       final listViewToDoListRecord = _model
                           .listViewPagingController!.itemList![listViewIndex];
                       return Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 0.0, 16.0, 8.0),
                         child: InkWell(
                           splashColor: Colors.transparent,
@@ -229,7 +222,7 @@ class _MyTasksWidgetState extends State<MyTasksWidget>
                             decoration: BoxDecoration(
                               color: FlutterFlowTheme.of(context)
                                   .secondaryBackground,
-                              boxShadow: [
+                              boxShadow: const [
                                 BoxShadow(
                                   blurRadius: 5.0,
                                   color: Color(0x230E151B),
@@ -238,111 +231,106 @@ class _MyTasksWidgetState extends State<MyTasksWidget>
                               ],
                               borderRadius: BorderRadius.circular(8.0),
                             ),
-                            child: InkWell(
-                              splashColor: Colors.transparent,
-                              focusColor: Colors.transparent,
-                              hoverColor: Colors.transparent,
-                              highlightColor: Colors.transparent,
-                              onTap: () async {
-                                context.pushNamed('TaskDetails');
-                              },
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Expanded(
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 12.0, 0.0, 12.0),
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Text(
-                                            listViewToDoListRecord.toDoName,
-                                            style: FlutterFlowTheme.of(context)
-                                                .headlineMedium,
-                                          ),
-                                          Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        0.0, 4.0, 0.0, 0.0),
-                                                child: Text(
-                                                  dateTimeFormat(
-                                                      'MMMEd',
-                                                      listViewToDoListRecord
-                                                          .toDoDate!),
-                                                  style: FlutterFlowTheme.of(
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Expanded(
+                                  child: Padding(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                        16.0, 12.0, 0.0, 12.0),
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          listViewToDoListRecord.toDoName,
+                                          style: FlutterFlowTheme.of(context)
+                                              .headlineMedium,
+                                        ),
+                                        Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Padding(
+                                              padding: const EdgeInsetsDirectional
+                                                  .fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                              child: Text(
+                                                dateTimeFormat(
+                                                  'MMMEd',
+                                                  listViewToDoListRecord
+                                                      .toDoDate!,
+                                                  locale: FFLocalizations.of(
                                                           context)
-                                                      .titleSmall,
+                                                      .languageCode,
                                                 ),
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .titleSmall,
                                               ),
-                                              Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        4.0, 4.0, 0.0, 0.0),
-                                                child: Text(
-                                                  dateTimeFormat(
-                                                      'jm',
-                                                      listViewToDoListRecord
-                                                          .toDoDate!),
-                                                  style: FlutterFlowTheme.of(
+                                            ),
+                                            Padding(
+                                              padding: const EdgeInsetsDirectional
+                                                  .fromSTEB(4.0, 4.0, 0.0, 0.0),
+                                              child: Text(
+                                                dateTimeFormat(
+                                                  'jm',
+                                                  listViewToDoListRecord
+                                                      .toDoDate!,
+                                                  locale: FFLocalizations.of(
                                                           context)
-                                                      .titleSmall,
+                                                      .languageCode,
                                                 ),
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .titleSmall,
                                               ),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
+                                            ),
+                                          ],
+                                        ),
+                                      ],
                                     ),
                                   ),
-                                  Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 12.0, 0.0),
-                                        child: ToggleIcon(
-                                          onPressed: () async {
-                                            await listViewToDoListRecord
-                                                .reference
-                                                .update({
-                                              ...mapToFirestore(
-                                                {
-                                                  'toDoState':
-                                                      !listViewToDoListRecord
-                                                          .toDoState,
-                                                },
-                                              ),
-                                            });
-                                          },
-                                          value:
-                                              listViewToDoListRecord.toDoState,
-                                          onIcon: Icon(
-                                            Icons.check_circle,
-                                            color: FlutterFlowTheme.of(context)
-                                                .primary,
-                                            size: 25.0,
-                                          ),
-                                          offIcon: Icon(
-                                            Icons.radio_button_off,
-                                            color: FlutterFlowTheme.of(context)
-                                                .secondaryText,
-                                            size: 25.0,
-                                          ),
+                                ),
+                                Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 0.0, 12.0, 0.0),
+                                      child: ToggleIcon(
+                                        onPressed: () async {
+                                          await listViewToDoListRecord.reference
+                                              .update({
+                                            ...mapToFirestore(
+                                              {
+                                                'toDoState':
+                                                    !listViewToDoListRecord
+                                                        .toDoState,
+                                              },
+                                            ),
+                                          });
+                                        },
+                                        value: listViewToDoListRecord.toDoState,
+                                        onIcon: Icon(
+                                          Icons.check_circle,
+                                          color: FlutterFlowTheme.of(context)
+                                              .primary,
+                                          size: 25.0,
+                                        ),
+                                        offIcon: Icon(
+                                          Icons.radio_button_off,
+                                          color: FlutterFlowTheme.of(context)
+                                              .secondaryText,
+                                          size: 25.0,
                                         ),
                                       ),
-                                    ],
-                                  ),
-                                ],
-                              ),
+                                    ),
+                                  ],
+                                ),
+                              ],
                             ),
                           ),
                         ).animateOnPageLoad(

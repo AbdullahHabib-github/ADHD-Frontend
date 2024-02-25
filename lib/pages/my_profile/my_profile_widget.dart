@@ -3,11 +3,9 @@ import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'my_profile_model.dart';
 export 'my_profile_model.dart';
@@ -26,7 +24,6 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
   final scaffoldKey = GlobalKey<ScaffoldState>();
   var hasContainerTriggered1 = false;
   var hasContainerTriggered2 = false;
-  var hasContainerTriggered3 = false;
   final animationsMap = {
     'containerOnActionTriggerAnimation1': AnimationInfo(
       trigger: AnimationTrigger.onActionTrigger,
@@ -36,8 +33,8 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 350.ms,
-          begin: Offset(40.0, 0.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(40.0, 0.0),
+          end: const Offset(0.0, 0.0),
         ),
       ],
     ),
@@ -49,21 +46,8 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 350.ms,
-          begin: Offset(-40.0, 0.0),
-          end: Offset(0.0, 0.0),
-        ),
-      ],
-    ),
-    'containerOnActionTriggerAnimation3': AnimationInfo(
-      trigger: AnimationTrigger.onActionTrigger,
-      applyInitialState: false,
-      effects: [
-        MoveEffect(
-          curve: Curves.easeInOut,
-          delay: 0.ms,
-          duration: 350.ms,
-          begin: Offset(-40.0, 0.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(-40.0, 0.0),
+          end: const Offset(0.0, 0.0),
         ),
       ],
     ),
@@ -73,11 +57,6 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
   void initState() {
     super.initState();
     _model = createModel(context, () => MyProfileModel());
-
-    // On page load action.
-    SchedulerBinding.instance.addPostFrameCallback((_) async {
-      context.pushNamed('mainpage');
-    });
 
     setupAnimations(
       animationsMap.values.where((anim) =>
@@ -134,7 +113,7 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                     color: FlutterFlowTheme.of(context).white,
                   ),
             ),
-            actions: [],
+            actions: const [],
             centerTitle: false,
             elevation: 0.0,
           ),
@@ -146,7 +125,7 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                 Expanded(
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 100.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 100.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -165,10 +144,10 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     16.0, 0.0, 0.0, 0.0),
                                 child: Text(
-                                  myProfileUsersRecord.displayName,
+                                  myProfileUsersRecord.fullName,
                                   style: FlutterFlowTheme.of(context)
                                       .titleMedium
                                       .override(
@@ -182,11 +161,175 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                           ],
                         ),
                         Container(
+                          width: double.infinity,
+                          height: 250.0,
+                          decoration: BoxDecoration(
+                            color: FlutterFlowTheme.of(context)
+                                .secondaryBackground,
+                            borderRadius: BorderRadius.circular(0.0),
+                          ),
+                          child: Align(
+                            alignment: const AlignmentDirectional(0.0, -1.0),
+                            child: SingleChildScrollView(
+                              child: Column(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.stretch,
+                                children: [
+                                  Divider(
+                                    thickness: 1.0,
+                                    color: FlutterFlowTheme.of(context).accent4,
+                                  ),
+                                  InkWell(
+                                    splashColor: Colors.transparent,
+                                    focusColor: Colors.transparent,
+                                    hoverColor: Colors.transparent,
+                                    highlightColor: Colors.transparent,
+                                    onTap: () async {
+                                      context.pushNamed('myTasks');
+                                    },
+                                    child: Container(
+                                      width: MediaQuery.sizeOf(context).width *
+                                          1.0,
+                                      decoration: BoxDecoration(
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryBackground,
+                                      ),
+                                      child: Padding(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                            16.0, 12.0, 16.0, 12.0),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            Text(
+                                              'My Tasks',
+                                              textAlign: TextAlign.center,
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily: 'Outfit',
+                                                        color: Colors.white,
+                                                        fontSize: 20.0,
+                                                        fontWeight:
+                                                            FontWeight.w800,
+                                                      ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  Divider(
+                                    thickness: 1.0,
+                                    color: FlutterFlowTheme.of(context).accent4,
+                                  ),
+                                  InkWell(
+                                    splashColor: Colors.transparent,
+                                    focusColor: Colors.transparent,
+                                    hoverColor: Colors.transparent,
+                                    highlightColor: Colors.transparent,
+                                    onTap: () async {
+                                      context.pushNamed('mainpage');
+                                    },
+                                    child: Container(
+                                      width: MediaQuery.sizeOf(context).width *
+                                          1.0,
+                                      decoration: BoxDecoration(
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryBackground,
+                                      ),
+                                      child: Padding(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                            16.0, 12.0, 16.0, 12.0),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            Text(
+                                              'Study Now',
+                                              textAlign: TextAlign.center,
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily: 'Outfit',
+                                                        color: Colors.white,
+                                                        fontSize: 20.0,
+                                                        fontWeight:
+                                                            FontWeight.w800,
+                                                      ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  Divider(
+                                    thickness: 1.0,
+                                    color: FlutterFlowTheme.of(context).accent4,
+                                  ),
+                                  InkWell(
+                                    splashColor: Colors.transparent,
+                                    focusColor: Colors.transparent,
+                                    hoverColor: Colors.transparent,
+                                    highlightColor: Colors.transparent,
+                                    onTap: () async {
+                                      context.pushNamed('googlemap');
+                                    },
+                                    child: Container(
+                                      width: MediaQuery.sizeOf(context).width *
+                                          1.0,
+                                      decoration: BoxDecoration(
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryBackground,
+                                      ),
+                                      child: Padding(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                            16.0, 12.0, 16.0, 12.0),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            Text(
+                                              'Find Study Buddy',
+                                              textAlign: TextAlign.center,
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily: 'Outfit',
+                                                        color: Colors.white,
+                                                        fontSize: 20.0,
+                                                        fontWeight:
+                                                            FontWeight.w800,
+                                                      ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  Divider(
+                                    thickness: 1.0,
+                                    color: FlutterFlowTheme.of(context).accent4,
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                        Container(
                           width: MediaQuery.sizeOf(context).width * 1.0,
                           decoration: BoxDecoration(
                             color: FlutterFlowTheme.of(context)
                                 .secondaryBackground,
-                            boxShadow: [
+                            boxShadow: const [
                               BoxShadow(
                                 blurRadius: 5.0,
                                 color: Color(0x230E151B),
@@ -200,7 +343,7 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     16.0, 12.0, 0.0, 0.0),
                                 child: Text(
                                   'Account Information',
@@ -208,7 +351,7 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 16.0, 0.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -241,7 +384,7 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                       Expanded(
                                         child: Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 20.0, 0.0, 20.0),
                                           child: Text(
                                             'Edit Profile',
@@ -251,7 +394,7 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 12.0, 0.0),
                                         child: Icon(
                                           Icons.arrow_forward_ios,
@@ -285,7 +428,7 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                   children: [
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             16.0, 20.0, 0.0, 20.0),
                                         child: Text(
                                           'Change Password',
@@ -295,7 +438,7 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 12.0, 0.0),
                                       child: Icon(
                                         Icons.arrow_forward_ios,
@@ -315,7 +458,7 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                 color: FlutterFlowTheme.of(context).lineColor,
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 1.0, 0.0, 0.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -353,7 +496,7 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                           ),
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     16.0, 12.0, 16.0, 12.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -380,10 +523,10 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                                   ),
                                                   child: Stack(
                                                     alignment:
-                                                        AlignmentDirectional(
+                                                        const AlignmentDirectional(
                                                             0.0, 0.0),
                                                     children: [
-                                                      Align(
+                                                      const Align(
                                                         alignment:
                                                             AlignmentDirectional(
                                                                 0.95, 0.0),
@@ -405,7 +548,7 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                                       ),
                                                       Align(
                                                         alignment:
-                                                            AlignmentDirectional(
+                                                            const AlignmentDirectional(
                                                                 -0.85, 0.0),
                                                         child: Container(
                                                           width: 36.0,
@@ -415,7 +558,7 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                                             color: FlutterFlowTheme
                                                                     .of(context)
                                                                 .secondaryBackground,
-                                                            boxShadow: [
+                                                            boxShadow: const [
                                                               BoxShadow(
                                                                 blurRadius: 4.0,
                                                                 color: Color(
@@ -478,7 +621,7 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                           ),
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     16.0, 12.0, 16.0, 12.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -512,10 +655,10 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                                   ),
                                                   child: Stack(
                                                     alignment:
-                                                        AlignmentDirectional(
+                                                        const AlignmentDirectional(
                                                             0.0, 0.0),
                                                     children: [
-                                                      Align(
+                                                      const Align(
                                                         alignment:
                                                             AlignmentDirectional(
                                                                 -0.9, 0.0),
@@ -538,7 +681,7 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                                       ),
                                                       Align(
                                                         alignment:
-                                                            AlignmentDirectional(
+                                                            const AlignmentDirectional(
                                                                 0.9, 0.0),
                                                         child: Container(
                                                           width: 36.0,
@@ -548,7 +691,7 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                                             color: FlutterFlowTheme
                                                                     .of(context)
                                                                 .secondaryBackground,
-                                                            boxShadow: [
+                                                            boxShadow: const [
                                                               BoxShadow(
                                                                 blurRadius: 4.0,
                                                                 color: Color(
@@ -581,10 +724,60 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                   ],
                                 ),
                               ),
+                              Divider(
+                                height: 2.0,
+                                thickness: 1.0,
+                                indent: 0.0,
+                                endIndent: 0.0,
+                                color: FlutterFlowTheme.of(context).lineColor,
+                              ),
+                              InkWell(
+                                splashColor: Colors.transparent,
+                                focusColor: Colors.transparent,
+                                hoverColor: Colors.transparent,
+                                highlightColor: Colors.transparent,
+                                onTap: () async {
+                                  GoRouter.of(context).prepareAuthEvent();
+                                  await authManager.signOut();
+                                  GoRouter.of(context).clearRedirectLocation();
+
+                                  context.goNamedAuth(
+                                      'SplashScreen', context.mounted);
+                                },
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Expanded(
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(14.0),
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            Text(
+                                              'Log Out',
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .headlineSmall,
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
                             ],
                           ),
                         ),
-                        Expanded(
+                        Text(
+                          'App Version v0.0',
+                          textAlign: TextAlign.center,
+                          style: FlutterFlowTheme.of(context).bodySmall,
+                        ),
+                        const Expanded(
                           child: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 44.0),
@@ -592,151 +785,10 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.end,
                               crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 16.0),
-                                  child: FFButtonWidget(
-                                    onPressed: () async {
-                                      GoRouter.of(context).prepareAuthEvent();
-                                      await authManager.signOut();
-                                      GoRouter.of(context)
-                                          .clearRedirectLocation();
-
-                                      context.goNamedAuth(
-                                          'SplashScreen', context.mounted);
-                                    },
-                                    text: 'Log Out',
-                                    options: FFButtonOptions(
-                                      width: 130.0,
-                                      height: 50.0,
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 0.0, 0.0, 0.0),
-                                      iconPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
-                                              0.0, 0.0, 0.0, 0.0),
-                                      color: FlutterFlowTheme.of(context)
-                                          .secondaryBackground,
-                                      textStyle: FlutterFlowTheme.of(context)
-                                          .titleMedium
-                                          .override(
-                                            fontFamily: 'Outfit',
-                                            color: FlutterFlowTheme.of(context)
-                                                .primaryText,
-                                          ),
-                                      elevation: 3.0,
-                                      borderSide: BorderSide(
-                                        color: Colors.transparent,
-                                        width: 1.0,
-                                      ),
-                                      borderRadius: BorderRadius.circular(8.0),
-                                    ),
-                                  ),
-                                ),
-                                Text(
-                                  'App Version v0.0',
-                                  textAlign: TextAlign.center,
-                                  style: FlutterFlowTheme.of(context).bodySmall,
-                                ),
-                              ],
+                              children: [],
                             ),
                           ),
                         ),
-                        if (Theme.of(context).brightness == Brightness.dark)
-                          Container(
-                            width: MediaQuery.sizeOf(context).width * 1.0,
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
-                            ),
-                            child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  16.0, 12.0, 16.0, 12.0),
-                              child: InkWell(
-                                splashColor: Colors.transparent,
-                                focusColor: Colors.transparent,
-                                hoverColor: Colors.transparent,
-                                highlightColor: Colors.transparent,
-                                onTap: () async {
-                                  context.pushNamed('mainpage');
-                                },
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Text(
-                                      'Study Now',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'Outfit',
-                                            color: Colors.white,
-                                            fontSize: 14.0,
-                                            fontWeight: FontWeight.w500,
-                                          ),
-                                    ),
-                                    Container(
-                                      width: 80.0,
-                                      height: 40.0,
-                                      decoration: BoxDecoration(
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryBackground,
-                                        borderRadius:
-                                            BorderRadius.circular(20.0),
-                                      ),
-                                      child: Stack(
-                                        alignment:
-                                            AlignmentDirectional(0.0, 0.0),
-                                        children: [
-                                          Align(
-                                            alignment:
-                                                AlignmentDirectional(-0.9, 0.0),
-                                            child: Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(8.0, 2.0, 0.0, 0.0),
-                                              child: Icon(
-                                                Icons.menu_book,
-                                                color: Color(0xFF95A1AC),
-                                                size: 24.0,
-                                              ),
-                                            ),
-                                          ),
-                                          Align(
-                                            alignment:
-                                                AlignmentDirectional(0.9, 0.0),
-                                            child: Container(
-                                              width: 36.0,
-                                              height: 36.0,
-                                              decoration: BoxDecoration(
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primaryText,
-                                                boxShadow: [
-                                                  BoxShadow(
-                                                    blurRadius: 4.0,
-                                                    color: Color(0x430B0D0F),
-                                                    offset: Offset(0.0, 2.0),
-                                                  )
-                                                ],
-                                                borderRadius:
-                                                    BorderRadius.circular(30.0),
-                                                shape: BoxShape.rectangle,
-                                              ),
-                                            ).animateOnActionTrigger(
-                                                animationsMap[
-                                                    'containerOnActionTriggerAnimation3']!,
-                                                hasBeenTriggered:
-                                                    hasContainerTriggered3),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
                       ],
                     ),
                   ),

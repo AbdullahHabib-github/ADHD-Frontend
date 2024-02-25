@@ -1,8 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'error_msg_model.dart';
@@ -47,12 +45,12 @@ class _ErrorMsgWidgetState extends State<ErrorMsgWidget> {
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBlack,
         appBar: AppBar(
-          backgroundColor: FlutterFlowTheme.of(context).primary,
+          backgroundColor: FlutterFlowTheme.of(context).warning,
           automaticallyImplyLeading: false,
           title: Opacity(
             opacity: 2.0,
             child: Align(
-              alignment: AlignmentDirectional(0.0, 0.0),
+              alignment: const AlignmentDirectional(0.0, 0.0),
               child: Text(
                 'ADHD Assistant',
                 style: FlutterFlowTheme.of(context).headlineMedium.override(
@@ -63,7 +61,7 @@ class _ErrorMsgWidgetState extends State<ErrorMsgWidget> {
               ),
             ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: false,
           elevation: 2.0,
         ),
@@ -73,28 +71,30 @@ class _ErrorMsgWidgetState extends State<ErrorMsgWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: const AlignmentDirectional(0.0, 0.0),
                 child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 220.0, 0.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 220.0, 0.0, 0.0),
                   child: Text(
                     'ERROR!',
-                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                    style: FlutterFlowTheme.of(context).headlineMedium.override(
                           fontFamily: 'Outfit',
-                          color: FlutterFlowTheme.of(context).error,
-                          fontSize: 26.0,
-                          fontWeight: FontWeight.w500,
+                          fontSize: 60.0,
+                          fontWeight: FontWeight.w900,
                         ),
                   ),
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: const AlignmentDirectional(0.0, 0.0),
                 child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(50.0, 5.0, 50.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(50.0, 5.0, 50.0, 0.0),
                   child: GradientText(
                     'Oops, something went wrong. We\'re working on fixing it. Please try again later.',
                     textAlign: TextAlign.center,
-                    style: FlutterFlowTheme.of(context).bodyMedium,
+                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                          fontFamily: 'Outfit',
+                          fontSize: 40.0,
+                        ),
                     colors: [
                       FlutterFlowTheme.of(context).primaryText,
                       FlutterFlowTheme.of(context).accent3

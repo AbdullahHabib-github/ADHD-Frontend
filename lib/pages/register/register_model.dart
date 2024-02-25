@@ -1,12 +1,6 @@
-import '/auth/firebase_auth/auth_util.dart';
-import '/backend/backend.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'register_widget.dart' show RegisterWidget;
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 class RegisterModel extends FlutterFlowModel<RegisterWidget> {
   ///  State fields for stateful widgets in this page.
@@ -15,28 +9,27 @@ class RegisterModel extends FlutterFlowModel<RegisterWidget> {
   FocusNode? fullNameFocusNode;
   TextEditingController? fullNameController;
   String? Function(BuildContext, String?)? fullNameControllerValidator;
-  // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode1;
-  TextEditingController? emailTextController;
-  String? Function(BuildContext, String?)? emailTextControllerValidator;
-  // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode2;
-  TextEditingController? passwordTextController;
-  late bool passwordVisibility1;
-  String? Function(BuildContext, String?)? passwordTextControllerValidator;
-  // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode3;
-  TextEditingController? confirmPasswordTextController;
-  late bool passwordVisibility2;
-  String? Function(BuildContext, String?)?
-      confirmPasswordTextControllerValidator;
+  // State field(s) for email widget.
+  FocusNode? emailFocusNode;
+  TextEditingController? emailController;
+  String? Function(BuildContext, String?)? emailControllerValidator;
+  // State field(s) for pass1 widget.
+  FocusNode? pass1FocusNode;
+  TextEditingController? pass1Controller;
+  late bool pass1Visibility;
+  String? Function(BuildContext, String?)? pass1ControllerValidator;
+  // State field(s) for pass2 widget.
+  FocusNode? pass2FocusNode;
+  TextEditingController? pass2Controller;
+  late bool pass2Visibility;
+  String? Function(BuildContext, String?)? pass2ControllerValidator;
 
   /// Initialization and disposal methods.
 
   @override
   void initState(BuildContext context) {
-    passwordVisibility1 = false;
-    passwordVisibility2 = false;
+    pass1Visibility = false;
+    pass2Visibility = false;
   }
 
   @override
@@ -44,14 +37,14 @@ class RegisterModel extends FlutterFlowModel<RegisterWidget> {
     fullNameFocusNode?.dispose();
     fullNameController?.dispose();
 
-    textFieldFocusNode1?.dispose();
-    emailTextController?.dispose();
+    emailFocusNode?.dispose();
+    emailController?.dispose();
 
-    textFieldFocusNode2?.dispose();
-    passwordTextController?.dispose();
+    pass1FocusNode?.dispose();
+    pass1Controller?.dispose();
 
-    textFieldFocusNode3?.dispose();
-    confirmPasswordTextController?.dispose();
+    pass2FocusNode?.dispose();
+    pass2Controller?.dispose();
   }
 
   /// Action blocks are added here.

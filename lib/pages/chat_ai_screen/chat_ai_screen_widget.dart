@@ -1,10 +1,8 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/pages/ai_chat_component/ai_chat_component_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'chat_ai_screen_model.dart';
 export 'chat_ai_screen_model.dart';
@@ -54,15 +52,15 @@ class _ChatAiScreenWidgetState extends State<ChatAiScreenWidget> {
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: FlutterFlowTheme.of(context).warning,
         appBar: AppBar(
-          backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+          backgroundColor: FlutterFlowTheme.of(context).warning,
           automaticallyImplyLeading: false,
           title: Text(
             'ADHD Assistant',
             style: FlutterFlowTheme.of(context).headlineMedium,
           ),
-          actions: [],
+          actions: const [],
           centerTitle: false,
           elevation: 0.0,
         ),
@@ -81,12 +79,12 @@ class _ChatAiScreenWidgetState extends State<ChatAiScreenWidget> {
               ),
             ),
             child: Align(
-              alignment: AlignmentDirectional(0.0, 0.0),
+              alignment: const AlignmentDirectional(0.0, 0.0),
               child: wrapWithModel(
                 model: _model.aiChatComponentModel,
                 updateCallback: () => setState(() {}),
                 updateOnChange: true,
-                child: AiChatComponentWidget(),
+                child: const AiChatComponentWidget(),
               ),
             ),
           ),

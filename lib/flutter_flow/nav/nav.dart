@@ -1,8 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import '/backend/backend.dart';
 
@@ -10,11 +8,7 @@ import '/auth/base_auth_user_provider.dart';
 
 import '/index.dart';
 import '/main.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/lat_lng.dart';
-import '/flutter_flow/place.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'serialization_util.dart';
 
 export 'package:go_router/go_router.dart';
 export 'serialization_util.dart';
@@ -79,42 +73,42 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? NavBarPage() : SplashScreenWidget(),
+          appStateNotifier.loggedIn ? const NavBarPage() : const SplashScreenWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? NavBarPage() : SplashScreenWidget(),
+              appStateNotifier.loggedIn ? const NavBarPage() : const SplashScreenWidget(),
         ),
         FFRoute(
           name: 'SplashScreen',
           path: '/splashScreen',
-          builder: (context, params) => SplashScreenWidget(),
+          builder: (context, params) => const SplashScreenWidget(),
         ),
         FFRoute(
           name: 'Login',
           path: '/login',
-          builder: (context, params) => LoginWidget(),
+          builder: (context, params) => const LoginWidget(),
         ),
         FFRoute(
           name: 'myTasks',
           path: '/myTasks',
           builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'myTasks')
-              : MyTasksWidget(),
+              ? const NavBarPage(initialPage: 'myTasks')
+              : const MyTasksWidget(),
         ),
         FFRoute(
           name: 'Register',
           path: '/register',
-          builder: (context, params) => RegisterWidget(),
+          builder: (context, params) => const RegisterWidget(),
         ),
         FFRoute(
           name: 'CompletedTasks',
           path: '/completedTasks',
           builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'CompletedTasks')
-              : CompletedTasksWidget(),
+              ? const NavBarPage(initialPage: 'CompletedTasks')
+              : const CompletedTasksWidget(),
         ),
         FFRoute(
           name: 'EditProfile',
@@ -140,18 +134,18 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'MyProfile',
           path: '/myProfile',
           builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'MyProfile')
-              : MyProfileWidget(),
+              ? const NavBarPage(initialPage: 'MyProfile')
+              : const MyProfileWidget(),
         ),
         FFRoute(
           name: 'ChangePassword',
           path: '/changePassword',
-          builder: (context, params) => ChangePasswordWidget(),
+          builder: (context, params) => const ChangePasswordWidget(),
         ),
         FFRoute(
           name: 'mainpage',
           path: '/mainpage',
-          builder: (context, params) => MainpageWidget(),
+          builder: (context, params) => const MainpageWidget(),
         ),
         FFRoute(
           name: 'learningstyles',
@@ -166,37 +160,34 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'chatbotgemini',
           path: '/chatbotgemini',
-          builder: (context, params) => ChatbotgeminiWidget(),
+          builder: (context, params) => const ChatbotgeminiWidget(),
         ),
         FFRoute(
           name: 'chatbotgeminiCopy',
           path: '/chatbotaudio',
-          builder: (context, params) => ChatbotgeminiCopyWidget(),
-        ),
-        FFRoute(
-          name: 'Chatbot',
-          path: '/chatbot',
-          builder: (context, params) => ChatbotWidget(),
-        ),
-        FFRoute(
-          name: 'chatbottest',
-          path: '/chatbottest',
-          builder: (context, params) => ChatbottestWidget(),
+          builder: (context, params) => const ChatbotgeminiCopyWidget(),
         ),
         FFRoute(
           name: 'ErrorMsg',
           path: '/errorMsg',
-          builder: (context, params) => ErrorMsgWidget(),
+          builder: (context, params) => const ErrorMsgWidget(),
         ),
         FFRoute(
           name: 'chat_ai_Screen',
           path: '/chatAiScreen',
-          builder: (context, params) => ChatAiScreenWidget(),
+          builder: (context, params) => const ChatAiScreenWidget(),
         ),
         FFRoute(
           name: 'Booklist',
           path: '/booklist',
-          builder: (context, params) => BooklistWidget(),
+          builder: (context, params) => const BooklistWidget(),
+        ),
+        FFRoute(
+          name: 'googlemap',
+          path: '/googlemap',
+          builder: (context, params) => params.isEmpty
+              ? const NavBarPage(initialPage: 'googlemap')
+              : const GooglemapWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -429,7 +420,7 @@ class TransitionInfo {
   final Duration duration;
   final Alignment? alignment;
 
-  static TransitionInfo appDefault() => TransitionInfo(hasTransition: false);
+  static TransitionInfo appDefault() => const TransitionInfo(hasTransition: false);
 }
 
 class RootPageContext {

@@ -3,7 +3,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'chatbotgemini_copy_model.dart';
 export 'chatbotgemini_copy_model.dart';
@@ -58,7 +57,7 @@ class _ChatbotgeminiCopyWidgetState extends State<ChatbotgeminiCopyWidget> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
                 child: Text(
                   'Let me read it for you',
                   style: FlutterFlowTheme.of(context).headlineMedium.override(
@@ -69,10 +68,10 @@ class _ChatbotgeminiCopyWidgetState extends State<ChatbotgeminiCopyWidget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: const AlignmentDirectional(0.0, 0.0),
                 child: Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(16.0, 20.0, 0.0, 20.0),
+                      const EdgeInsetsDirectional.fromSTEB(16.0, 20.0, 0.0, 20.0),
                   child: Text(
                     'What topic do you want to study today?',
                     style: FlutterFlowTheme.of(context).headlineSmall.override(
@@ -83,7 +82,7 @@ class _ChatbotgeminiCopyWidgetState extends State<ChatbotgeminiCopyWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 50.0, 16.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 50.0, 16.0),
                 child: TextFormField(
                   controller: _model.textController,
                   focusNode: _model.textFieldFocusNode,
@@ -100,28 +99,28 @@ class _ChatbotgeminiCopyWidgetState extends State<ChatbotgeminiCopyWidget> {
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0x00000000),
                         width: 2.0,
                       ),
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     errorBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0x00000000),
                         width: 2.0,
                       ),
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     focusedErrorBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0x00000000),
                         width: 2.0,
                       ),
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     contentPadding:
-                        EdgeInsetsDirectional.fromSTEB(20.0, 32.0, 20.0, 12.0),
+                        const EdgeInsetsDirectional.fromSTEB(20.0, 32.0, 20.0, 12.0),
                   ),
                   style: FlutterFlowTheme.of(context).headlineSmall.override(
                         fontFamily: 'Outfit',
@@ -147,9 +146,9 @@ class _ChatbotgeminiCopyWidgetState extends State<ChatbotgeminiCopyWidget> {
                 },
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 1.0),
+                alignment: const AlignmentDirectional(0.0, 1.0),
                 child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 100.0, 0.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 100.0, 0.0, 0.0),
                   child: FFButtonWidget(
                     onPressed: () {
                       print('Button pressed ...');
@@ -158,9 +157,9 @@ class _ChatbotgeminiCopyWidgetState extends State<ChatbotgeminiCopyWidget> {
                     options: FFButtonOptions(
                       height: 40.0,
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                       iconPadding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).primary,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
@@ -168,7 +167,7 @@ class _ChatbotgeminiCopyWidgetState extends State<ChatbotgeminiCopyWidget> {
                                 color: Colors.white,
                               ),
                       elevation: 3.0,
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Colors.transparent,
                         width: 1.0,
                       ),

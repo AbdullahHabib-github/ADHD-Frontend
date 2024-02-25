@@ -27,10 +27,6 @@
           "order": "ASCENDING"
         },
         {
-          "fieldPath": "toDoState",
-          "order": "ASCENDING"
-        },
-        {
           "fieldPath": "toDoDate",
           "order": "ASCENDING"
         }
